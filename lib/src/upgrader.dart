@@ -554,25 +554,28 @@ class Upgrader {
           ));
     }
     return AlertDialog(
-      title: Text(title),
+      title: Text(title,style: const TextStyle(color: Colors.black),),
       content: SingleChildScrollView(
-          child: Column(
+          child: Container(
+            color: Colors.red,
+            child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Text(
-            message,
-            style: const TextStyle(color: Colors.black),
-          ),
-          Padding(
-              padding: const EdgeInsets.only(top: 15.0),
-              child: Text(
-                messages!.message(UpgraderMessage.prompt)!,
-                style: const TextStyle(color: Colors.black),
-              )),
-          if (notes != null) notes,
+            Text(
+              message,
+              style: const TextStyle(color: Colors.black),
+            ),
+            Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: Text(
+                  messages!.message(UpgraderMessage.prompt)!,
+                  style: const TextStyle(color: Colors.black),
+                )),
+            if (notes != null) notes,
         ],
-      )),
+      ),
+          )),
       actions: <Widget>[
         if (showIgnore)
           TextButton(
