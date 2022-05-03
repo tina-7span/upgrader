@@ -542,7 +542,8 @@ class Upgrader {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(messages!.message(UpgraderMessage.releaseNotes)!,
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black)),
               Text(
                 releaseNotes,
                 maxLines: 15,
