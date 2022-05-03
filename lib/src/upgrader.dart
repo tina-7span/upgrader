@@ -548,6 +548,7 @@ class Upgrader {
                 releaseNotes,
                 maxLines: 15,
                 overflow: TextOverflow.ellipsis,
+                style: const TextStyle(color: Colors.black),
               ),
             ],
           ));
@@ -592,11 +593,13 @@ class Upgrader {
           child: Column(
             children: <Widget>[
               Text(messages!.message(UpgraderMessage.releaseNotes)!,
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black)),
               Text(
                 releaseNotes,
                 maxLines: 14,
                 overflow: TextOverflow.ellipsis,
+                style: const TextStyle(color: Colors.black),
               ),
             ],
           ));
