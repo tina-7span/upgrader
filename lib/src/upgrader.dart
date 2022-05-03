@@ -560,10 +560,16 @@ class Upgrader {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Text(message),
+          Text(
+            message,
+            style: const TextStyle(color: Colors.black),
+          ),
           Padding(
               padding: const EdgeInsets.only(top: 15.0),
-              child: Text(messages!.message(UpgraderMessage.prompt)!)),
+              child: Text(
+                messages!.message(UpgraderMessage.prompt)!,
+                style: const TextStyle(color: Colors.black),
+              )),
           if (notes != null) notes,
         ],
       )),
@@ -610,10 +616,17 @@ class Upgrader {
         // mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Text(message),
+          Text(
+            message,
+            style: const TextStyle(color: Colors.black),
+          ),
           Padding(
-              padding: const EdgeInsets.only(top: 15.0),
-              child: Text(messages!.message(UpgraderMessage.prompt)!)),
+            padding: const EdgeInsets.only(top: 15.0),
+            child: Text(
+              messages!.message(UpgraderMessage.prompt)!,
+              style: const TextStyle(color: Colors.black),
+            ),
+          ),
           if (notes != null) notes,
         ],
       ),
