@@ -535,26 +535,13 @@ class Upgrader {
       BuildContext context) {
     Widget? notes;
     if (releaseNotes != null) {
-      notes = Padding(
-          padding: const EdgeInsets.only(top: 15.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(messages!.message(UpgraderMessage.releaseNotes)!,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.black)),
-              Text(
-                releaseNotes,
-                maxLines: 15,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(color: Colors.black),
-              ),
-            ],
-          ));
+      notes = Container();
     }
     return AlertDialog(
-      title: Text(title,style: const TextStyle(color: Colors.black),),
+      title: Text(
+        title,
+        style: const TextStyle(color: Colors.black),
+      ),
       content: SingleChildScrollView(
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -594,24 +581,13 @@ class Upgrader {
       String? releaseNotes, BuildContext context) {
     Widget? notes;
     if (releaseNotes != null) {
-      notes = Padding(
-          padding: const EdgeInsets.only(top: 15.0),
-          child: Column(
-            children: <Widget>[
-              Text(messages!.message(UpgraderMessage.releaseNotes)!,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.black)),
-              Text(
-                releaseNotes,
-                maxLines: 14,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(color: Colors.black),
-              ),
-            ],
-          ));
+      notes = Container();
     }
     return CupertinoAlertDialog(
-      title: Text(title),
+      title: Text(
+        title,
+        style: const TextStyle(color: Colors.black),
+      ),
       content: Column(
         // mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
